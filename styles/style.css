@@ -1,0 +1,16 @@
+#bin1, #bin2, #canvas {
+  width: 20%;
+  height: 400px;
+  background: #aaa;
+  float: left;
+}
+
+#bin2 {
+  float: right;
+}
+
+#canvas {
+  width: 30%;
+  border: 1px solid #c2c2c2;
+  background: none;
+}
