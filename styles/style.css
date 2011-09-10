@@ -1,8 +1,9 @@
 #bin1, #bin2, #canvas {
-  width: 20%;
-  height: 400px;
+  width: 25%;
+  height: 600px;
   background: #aaa;
   float: left;
+  margin: 3.5% 0px;
 }
 
 #bin2 {
@@ -10,7 +11,8 @@
 }
 
 #canvas {
-  width: 30%;
+  width: 43%;
+  margin: 3.5%;
   border: 1px solid #c2c2c2;
   background: none;
 }
@@ -22,6 +24,26 @@
 }
 
 .thumb video {
-  width: 100px;
+  width: 100%;
+}
+
+[draggable=true] {
+  cursor: move;
+}
+
+video {
+  cursor: pointer !important;
+}
+
+#audioSource {
+  
+}
+
+#videoSource {
+  
+}
+
+#mashup {
+  
 }
 

@@ -16,12 +16,12 @@ jQuery(function($){
     .bind( 'drop', function( e ) {
       e.stopPropagation();
       e.preventDefault();
-            
+      droplocation = $(e.target);
       $.each( e.dataTransfer.files, function(index, file){
         var fileReader = new FileReader();
             fileReader.onload = (function(file) {
                return function(e) { 
-                 $('#bin1').append( '<div class="thumb" draggable="true"><video width="100px" controls src="'+ e.target.result  +'"></div>') 
+                droplocation.append( '<div class="thumb" draggable="true"><video controls src="'+ e.target.result  +'"></div>') 
                }; 
             })(file);
         fileReader.readAsDataURL(file);
