@@ -11,7 +11,7 @@ jQuery(function($){
   // Thanks to @tbranyen for figuring this out!
   $.event.props.push('dataTransfer');
 
-  var body = $('body')
+  $('body')
     .bind( 'dragenter dragover', false)
     .bind( 'drop', function( e ) {
       e.stopPropagation();
@@ -28,4 +28,5 @@ jQuery(function($){
       });
       
     });
+
 });

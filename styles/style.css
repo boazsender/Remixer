@@ -35,12 +35,20 @@ video {
   cursor: pointer !important;
 }
 
+#audioSource, #videoSource {
+  width: 48%;
+  height: 100px;
+  float: left;
+  border-bottom: 1px solid #c2c2c2;
+}
+
 #audioSource {
-  
+  border-right: 1px solid #c2c2c2;
 }
 
 #videoSource {
-  
+  border-left: 1px solid #c2c2c2;
+  float: right;
 }
 
 #mashup {
