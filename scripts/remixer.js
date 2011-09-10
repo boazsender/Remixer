@@ -21,7 +21,7 @@ jQuery(function($){
         var fileReader = new FileReader();
             fileReader.onload = (function(file) {
                return function(e) { 
-                 $('#bin1').append( '<video width="100px" draggable="true" controls src="'+ e.target.result  +'">') 
+                 $('#bin1').append( '<div class="thumb" draggable="true"><video width="100px" controls src="'+ e.target.result  +'"></div>') 
                }; 
             })(file);
         fileReader.readAsDataURL(file);
