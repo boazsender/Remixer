@@ -14,3 +14,7 @@
   border: 1px solid #c2c2c2;
   background: none;
 }
+
+#bin1 video, #bin2 video {
+  margin: 10px;
+}
