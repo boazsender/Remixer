@@ -11,7 +11,7 @@ h1 {
 }
 #bin1, #bin2, #canvas {
   width: 24%;
-  height: 580px;
+  min-height: 580px;
   float: left;
   margin: 3.5% 0px;
 }
