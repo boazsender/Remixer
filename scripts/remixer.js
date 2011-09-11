@@ -40,7 +40,7 @@ jQuery(function($){
 
   $('#audioSource, #videoSource').droppable({
   	drop: function( event, ui ) {
-  	  $( ui.helper ).appendTo( this )
+  	  $( this ).html( ui.helper )
   	}
   });
   
