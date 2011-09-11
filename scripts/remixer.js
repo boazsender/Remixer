@@ -104,8 +104,8 @@ jQuery(function($){
         audio = $('#audioSource video');
 
     $('#newAudio, #mashup video').remove()
-    audio.prependTo('#' + audio.attr('class').split(' ')[0])
-    video.prependTo('#' + video.attr('class').split(' ')[0])
+    audio.insertAfter($('#' + audio.attr('class').split(' ')[0]).children().eq(0))
+    video.insertAfter($('#' + video.attr('class').split(' ')[0]).children().eq(0))
     
   });
   
