@@ -1,9 +1,24 @@
+body {
+  padding: 1% 5%;
+}
+h1 {
+  font-size: 205%;
+  display: inline;
+}
+.controls a {
+  float: right;
+  margin: 3px;
+}
 #bin1, #bin2, #canvas {
-  width: 25%;
+  width: 24%;
   height: 600px;
-  background: #aaa;
   float: left;
   margin: 3.5% 0px;
+}
+
+#bin1, #bin2 {
+  padding: 1.5% 0;
+  text-align: center;
 }
 
 #bin2 {
@@ -26,10 +41,12 @@
 }
 
 #audioSource, #videoSource {
-  width: 48%;
-  height: 200px;
+  width: 40%;
+  height: 150px;
   float: left;
   border-bottom: 1px solid #c2c2c2;
+  padding: 4%;
+  text-align: center;
 }
 
 #audioSource {
@@ -45,3 +62,6 @@
   width: 100%;
 }
 
+.controls {
+  margin: 10px;
+}
