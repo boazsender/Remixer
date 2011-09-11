@@ -99,14 +99,13 @@ jQuery(function($){
   });
   
   // Send everything back where it came from
-  $('#clearVideos').click(function(){
+  $('#clearVideos').click(function( event ){
     var video = $('#videoSource video'),
         audio = $('#audioSource video');
 
     $('#newAudio, #mashup video').remove()
-    
-    audio.prependTo('#bin1')
-    video.prependTo('#bin2')
+    audio.prependTo('#' + audio.attr('class').split(' ')[0])
+    video.prependTo('#' + video.attr('class').split(' ')[0])
     
   });
   
