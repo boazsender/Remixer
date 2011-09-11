@@ -44,6 +44,35 @@ jQuery(function($){
   	}
   });
   
+  $('#makeMashup').click(function(){
+    var audio = Popcorn('#audioSource video'),
+        audioSrc = $('#audioSource video').attr('src'),
+        video = Popcorn('#videoSource video'),
+        videoSrc = $('#videoSource video').attr('src');
+    
+    $('<audio>', {
+      src: audioSrc,
+      id: 'newAudio'
+    })
+    .appendTo('body')
+    .css({
+     display: 'none' 
+    });
+
+    $('<video>', {
+      src: videoSrc,
+      id: 'newVideo'
+    })
+    .appendTo('#canvas')
+
+    var newAudio = Popcorn('#newAudio'),
+        newVideo = Popcorn('#newVideo');
+    
+    newAudio.play()
+    newVideo.volume(0).play()
+    
+  });
+  
 /*
   // This doesn't work on <video elements>
   $('#audioSource').bind( 'dragenter dragover', false);
@@ -57,3 +86,6 @@ jQuery(function($){
 
 
 });
+
+
+
