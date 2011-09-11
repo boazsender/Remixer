@@ -45,6 +45,12 @@ jQuery(function($){
     }
   });
 
+  // Make all videos draggable
+  $('.thumb')
+  .draggable({
+    revert: true
+  })
+
   // Make the audio/video sources droppable
   $('#audioSource, #videoSource').droppable({
   	drop: function( event, ui ) {
