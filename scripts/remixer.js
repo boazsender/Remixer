@@ -28,7 +28,7 @@ jQuery(function($){
               fileReader.onload = (function(file) {
                  return function(e) {
                   $('<video>', {
-                    class: 'thumb',
+                    class: droplocation.attr('id') + ' thumb',
                     controls: true,
                     src: e.target.result
                   })
@@ -45,12 +45,14 @@ jQuery(function($){
     }
   });
 
+  // Make the audio/video sources droppable
   $('#audioSource, #videoSource').droppable({
   	drop: function( event, ui ) {
   	  $( this ).html( ui.helper )
   	}
   });
   
+  // Mashup the content from audio and video sources
   $('#makeMashup').click(function(){
     var audio = Popcorn('#audioSource video'),
         audioSrc = $('#audioSource video').attr('src'),
@@ -82,19 +84,35 @@ jQuery(function($){
     
   });
   
+  // Swap the audio and video sources
   $('#swapVideos').click(function(){
-    console.log('asd')
     var video = $('#videoSource video'),
         audio = $('#audioSource video');
     
 
         video.appendTo('#audioSource')
         audio.appendTo('#videoSource')
+        
+        $('#newAudio, #mashup video').remove()
+        
+    
+  });
+  
+  // Send everything back where it came from
+  $('#clearVideos').click(function(){
+    var video = $('#videoSource video'),
+        audio = $('#audioSource video');
+
+    $('#newAudio, #mashup video').remove()
+    
+    audio.prependTo('#bin1')
+    video.prependTo('#bin2')
     
   });
   
 /*
   // This doesn't work on <video elements>
+  // Lame.
   $('#audioSource').bind( 'dragenter dragover', false);
   $('#audioSource').bind( 'drop', function( event ) {
     event.stopPropagation();
