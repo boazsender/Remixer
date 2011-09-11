@@ -57,7 +57,7 @@ jQuery(function($){
         video = Popcorn('#videoSource video'),
         videoSrc = $('#videoSource video').attr('src');
     
-    $('<audio>', {
+    $('<video>', {
       src: audioSrc,
       id: 'newAudio'
     })
