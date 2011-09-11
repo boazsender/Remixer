@@ -59,11 +59,13 @@ jQuery(function($){
      display: 'none' 
     });
 
-    $('<video>', {
-      src: videoSrc,
-      id: 'newVideo'
-    })
-    .appendTo('#canvas')
+    $('#mashup').html(
+      $('<video>', {
+        src: videoSrc,
+        id: 'newVideo'
+      })
+    )
+    
 
     var newAudio = Popcorn('#newAudio'),
         newVideo = Popcorn('#newVideo');
