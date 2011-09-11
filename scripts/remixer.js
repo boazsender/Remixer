@@ -17,16 +17,43 @@ jQuery(function($){
       e.stopPropagation();
       e.preventDefault();
       droplocation = $(e.target);
-      $.each( e.dataTransfer.files, function(index, file){
-        var fileReader = new FileReader();
-            fileReader.onload = (function(file) {
-               return function(e) { 
-                droplocation.append( '<div class="thumb" draggable="true"><video controls src="'+ e.target.result  +'"></div>') 
-               }; 
-            })(file);
-        fileReader.readAsDataURL(file);
-      });
-      
+      if( e.dataTransfer && e.dataTransfer.files ){
+        $.each( e.dataTransfer.files, function(index, file){
+          var fileReader = new FileReader();
+              fileReader.onload = (function(file) {
+                 return function(e) {
+                  $('<video>', {
+                    class: 'thumb',
+                    controls: true,
+                    src: e.target.result
+                  })
+                  .draggable({
+                    revert: true
+                  })
+                  .appendTo( droplocation )
+                }; 
+              })(file);
+          fileReader.readAsDataURL(file);
+        });
+      }
     });
+
+  $('#audioSource, #videoSource').droppable({
+  	drop: function( event, ui ) {
+  	  $( ui.helper ).appendTo( this )
+  	}
+  });
+  
+/*
+  // This doesn't work on <video elements>
+  $('#audioSource').bind( 'dragenter dragover', false);
+  $('#audioSource').bind( 'drop', function( event ) {
+    event.stopPropagation();
+    event.preventDefault();
+    $('#audioSource').append( event.dataTransfer.getData('text/html') );
+      
+  });
+*/
+
 
 });

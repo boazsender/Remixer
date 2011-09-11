@@ -19,25 +19,15 @@
 
 .thumb {
   background: #333;
-  padding: 10px;
-  margin: 10px;
-}
-
-.thumb video {
-  width: 100%;
-}
-
-[draggable=true] {
+  padding: 5%;
+  margin: 5%;
+  width: 80%;
   cursor: move;
-}
-
-video {
-  cursor: pointer !important;
 }
 
 #audioSource, #videoSource {
   width: 48%;
-  height: 100px;
+  height: 200px;
   float: left;
   border-bottom: 1px solid #c2c2c2;
 }
