@@ -19,7 +19,7 @@ h1 {
 #bin1, #bin2 {
   padding: 1.5% 0;
   text-align: center;
-  height: 545px;
+  min-height: 545px;
   
 }
 
