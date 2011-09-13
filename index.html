@@ -23,22 +23,50 @@
 
 </head>
 <body>
-  <div class="clearfix controls class alert-message info">
-    <h1>Video Remixer</h1>
-    <a href="#" id="makeMashup" class="btn primary">Mashup!</a>
-    <a href="#" id="swapVideos" class="btn primary">Swap!</a>
-    <a href="#" id="clearVideos" class="btn primary">Clear!</a>
-  </div>
-  <figure id="bin1" class="well">
-    <h1>Bin 1</h1>
-  </figure>
-  <figure id="canvas">
-    <section id="audioSource"><h1>Audio Source</h1></section>
-    <section id="videoSource"><h1>Video Source</h1></section>
-    <section id="mashup"></section>
-  </figure>
-  <figure id="bin2" class="well">
-    <h1>Bin 2</h1>
-  </figure>
+	<div id="wrapper"class='clearfix'>
+	  <h1>Gendered Advertising Remixer</h1>
+		<figure id="bin1" class='well' >
+		  <h1 id="boys">Boys Ads</h1>
+		    <video class="bin1 thumb" poster="boys-and-girls/Boys_CosmicCatch.png" src="boys-and-girls/Boys_CosmicCatch.webm"></video>
+        <video class="bin1 thumb" poster="boys-and-girls/Boys_HotWheelsBattleforce.png" src="boys-and-girls/Boys_HotWheelsBattleforce.webm"></video>
+        <video class="bin1 thumb" poster="boys-and-girls/Boys_HotWheelsCustomMotors.png" src="boys-and-girls/Boys_HotWheelsCustomMotors.webm"></video>
+        <video class="bin1 thumb" poster="boys-and-girls/Boys_LegoMarsMission.png" src="boys-and-girls/Boys_LegoMarsMission.webm"></video>
+        <video class="bin1 thumb" poster="boys-and-girls/Boys_NerfSnipterGun.png" src="boys-and-girls/Boys_NerfSnipterGun.webm"></video>
+        <video class="bin1 thumb" poster="boys-and-girls/Boys_PiratesOnline.png" src="boys-and-girls/Boys_PiratesOnline.webm"></video>
+        <video class="bin1 thumb" poster="boys-and-girls/Boys_SpaceHeroesSpaceSet.png" src="boys-and-girls/Boys_SpaceHeroesSpaceSet.webm"></video>
+        <video class="bin1 thumb" poster="boys-and-girls/Boys_TonkaBoyhood.png" src="boys-and-girls/Boys_TonkaBoyhood.webm"></video>
+        <video class="bin1 thumb" poster="boys-and-girls/Boys_TruckFord.png" src="boys-and-girls/Boys_TruckFord.webm"></video>
+        <video class="bin1 thumb" poster="boys-and-girls/Boys_YuGiOh_CardGame.png" src="boys-and-girls/Boys_YuGiOh_CardGame.webm"></video>
+		</figure>
+		<figure id="canvas" class='well'>
+			<div class='droppables clearfix'>
+				<section id="audioSource" ></section>
+				<section id="videoSource"></section>
+			</div>
+			
+			<div id='controls' class="controls class">
+				<a href="#" id="makeMashup" class="btn large success">Mashup</a>
+        <a href="#" id="swapVideos" class="btn large primary">Swap</a>
+        <a href="#" id="clearVideos" class="btn large danger">Clear</a>
+			</div>			
+			<section id="mashup"></section>
+		</figure>
+	
+		<figure id="bin2" class='well' >
+		  <h1 id="girls">Girls Ads</h1>
+		    <video class="bin2 thumb" poster="boys-and-girls/Girls_BabyAnnabellDoll.png" src="boys-and-girls/Girls_BabyAnnabellDoll.webm"></video>
+        <video class="bin2 thumb" poster="boys-and-girls/Girls_Babydoll.png" src="boys-and-girls/Girls_Babydoll.webm"></video>
+        <video class="bin2 thumb" poster="boys-and-girls/Girls_BarbieGirl.png" src="boys-and-girls/Girls_BarbieGirl.webm"></video>
+        <video class="bin2 thumb" poster="boys-and-girls/Girls_BarbieJeep.png" src="boys-and-girls/Girls_BarbieJeep.webm"></video>
+        <video class="bin2 thumb" poster="boys-and-girls/Girls_BratzMakeUp.png" src="boys-and-girls/Girls_BratzMakeUp.webm"></video>
+        <video class="bin2 thumb" poster="boys-and-girls/Girls_Chixos.png" src="boys-and-girls/Girls_Chixos.webm"></video>
+        <video class="bin2 thumb" poster="boys-and-girls/Girls_ChouChouBabyDoll.png" src="boys-and-girls/Girls_ChouChouBabyDoll.webm"></video>
+        <video class="bin2 thumb" poster="boys-and-girls/Girls_DisneyDollBell.png" src="boys-and-girls/Girls_DisneyDollBell.webm"></video>
+        <video class="bin2 thumb" poster="boys-and-girls/Girls_FurRealFriends.png" src="boys-and-girls/Girls_FurRealFriends.webm"></video>
+        <video class="bin2 thumb" poster="boys-and-girls/Girls_FurRealMySizePony.png" src="boys-and-girls/Girls_FurRealMySizePony.webm"></video>
+		</figure>
+
+	</div>
+
 </body>
 </html>
